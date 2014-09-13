@@ -1,0 +1,6 @@
+while true;
+do
+LENGTHLENGTH=$(cat /dev/urandom | tr -dc '1-9' | fold -w 1 | head -n 1)
+LENGTH=$(cat /dev/urandom | tr -dc [:digit:] | fold -w ${LENGTHLENGTH} | head -n 1 )
+cat /dev/urandom | tr -dc 'gG' | fold -w ${LENGTH} | head -n 1
+done
